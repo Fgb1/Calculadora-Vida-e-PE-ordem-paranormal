@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>app.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6897bb;}
+.s2 { color: #cc7832;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app.py</font>
+</center></td></tr></table>
+<pre><span class="s0">nex_possivel = (</span><span class="s1">0</span><span class="s2">, </span><span class="s1">5</span><span class="s2">, </span><span class="s1">10</span><span class="s2">, </span><span class="s1">15</span><span class="s2">, </span><span class="s1">20</span><span class="s2">, </span><span class="s1">25</span><span class="s2">, </span><span class="s1">30</span><span class="s2">, </span><span class="s1">35</span><span class="s2">, </span><span class="s1">40</span><span class="s2">, </span><span class="s1">45</span><span class="s2">, </span><span class="s1">50</span><span class="s2">, </span><span class="s1">55</span><span class="s2">, </span><span class="s1">60</span><span class="s2">, </span><span class="s1">65</span><span class="s2">, </span><span class="s1">70</span><span class="s2">, </span><span class="s1">75</span><span class="s2">, </span><span class="s1">80</span><span class="s2">, </span><span class="s1">85</span><span class="s2">, </span><span class="s1">90</span><span class="s2">, </span><span class="s1">95</span><span class="s2">, </span><span class="s1">99</span><span class="s0">)</span>
+<span class="s0">nex = int(input(</span><span class="s3">&quot;Digite seu NEX: &quot;</span><span class="s0">))</span>
+<span class="s2">if </span><span class="s0">nex </span><span class="s2">in </span><span class="s0">nex_possivel :</span>
+    <span class="s2">pass</span>
+<span class="s0">nex = nex_possivel.index(nex)</span>
+
+<span class="s0">print(</span><span class="s3">&quot;Digite seus Atributos&quot;</span><span class="s0">)</span>
+<span class="s0">FOR = int(input(</span><span class="s3">&quot;For: &quot;</span><span class="s0">))</span>
+<span class="s0">AGI = int(input(</span><span class="s3">&quot;Agi: &quot;</span><span class="s0">))</span>
+<span class="s0">VIG = int(input(</span><span class="s3">&quot;Vig: &quot;</span><span class="s0">))</span>
+<span class="s0">INT = int(input(</span><span class="s3">&quot;Int: &quot;</span><span class="s0">))</span>
+<span class="s0">PRE = int(input(</span><span class="s3">&quot;Pre: &quot;</span><span class="s0">))</span>
+
+<span class="s2">class </span><span class="s0">Vida:</span>
+    <span class="s2">def  </span><span class="s0">__init__ (self):</span>
+        <span class="s0">self.ocultista = (</span><span class="s1">2 </span><span class="s0">+ VIG) * nex + (</span><span class="s1">12 </span><span class="s0">+ VIG)</span>
+        <span class="s0">self.combatente = (</span><span class="s1">4 </span><span class="s0">+ VIG) * nex + (</span><span class="s1">20 </span><span class="s0">+ VIG)</span>
+        <span class="s0">self.especialista = (</span><span class="s1">3 </span><span class="s0">+ VIG) * nex + (</span><span class="s1">16 </span><span class="s0">+ VIG)</span>
+    <span class="s2">pass</span>
+<span class="s0">vida = Vida()</span>
+
+<span class="s2">class </span><span class="s0">PE:</span>
+    <span class="s2">def </span><span class="s0">__init__ (self):</span>
+        <span class="s0">self.ocultista =  (</span><span class="s1">4 </span><span class="s0">+ PRE) * nex + (</span><span class="s1">4 </span><span class="s0">+ PRE)</span>
+        <span class="s0">self.combatente = (</span><span class="s1">2 </span><span class="s0">+ PRE) * nex + (</span><span class="s1">2 </span><span class="s0">+ PRE)</span>
+        <span class="s0">self.especialista = (</span><span class="s1">3 </span><span class="s0">+ PRE) * nex + (</span><span class="s1">3 </span><span class="s0">+ PRE)</span>
+    <span class="s2">pass</span>
+<span class="s0">pe = PE()</span>
+
+
+<span class="s0">classes = (</span><span class="s3">&quot;a&quot;</span><span class="s2">, </span><span class="s3">&quot;ocultista&quot;</span><span class="s2">, </span><span class="s3">&quot;combatente&quot;</span><span class="s2">, </span><span class="s3">&quot;especialista&quot;</span><span class="s0">)</span>
+<span class="s0">classe = input(</span><span class="s3">&quot;Classe: &quot;</span><span class="s0">)</span>
+<span class="s2">if </span><span class="s0">classe.lower </span><span class="s2">in </span><span class="s0">classes:</span>
+    <span class="s2">pass</span>
+<span class="s0">classe = int(classes.index(classe))</span>
+<span class="s2">if </span><span class="s0">classe == </span><span class="s1">1 </span><span class="s0">:</span>
+    <span class="s0">print(</span><span class="s3">&quot;Vida:&quot;</span><span class="s2">, </span><span class="s0">vida.ocultista)</span>
+    <span class="s0">print(</span><span class="s3">&quot;PE:&quot;</span><span class="s2">, </span><span class="s0">pe.ocultista)</span>
+<span class="s2">elif </span><span class="s0">classe == </span><span class="s1">2</span><span class="s0">:</span>
+    <span class="s0">print(</span><span class="s3">&quot;Vida:&quot;</span><span class="s2">, </span><span class="s0">vida.combatente)</span>
+    <span class="s0">print(</span><span class="s3">&quot;PE:&quot;</span><span class="s2">, </span><span class="s0">pe.combatente)</span>
+<span class="s2">elif </span><span class="s0">classe == </span><span class="s1">3</span><span class="s0">:</span>
+    <span class="s0">print(</span><span class="s3">&quot;Vida:&quot;</span><span class="s2">, </span><span class="s0">vida.especialista)</span>
+    <span class="s0">print(</span><span class="s3">&quot;PE:&quot;</span><span class="s2">, </span><span class="s0">pe.especialista)</span>
+<span class="s2">else</span><span class="s0">:</span>
+    <span class="s0">print(</span><span class="s3">&quot;Coloque uma classe válida!&quot;</span><span class="s0">)</span>
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
